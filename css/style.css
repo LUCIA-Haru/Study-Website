@@ -151,6 +151,12 @@ h3 {
 .btn-theme:focus {
   box-shadow: 0 0 8px var(--main-color);
 }
+.btn-block {
+  width: 100%;
+}
+.btn-form {
+  height: 48px;
+}
 /* 10. page loader */
 /* 11. circular img */
 .circular-img {
@@ -177,7 +183,64 @@ h3 {
   z-index: 1;
 }
 /* 12. forms */
-/* 13. video model */
+.form-title {
+  font-size: 24px;
+  margin: 0 0 30px;
+  font-weight: 600;
+}
+.form-control::placeholder {
+  color: var(--Black-70);
+}
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+.form-control {
+  height: 48px;
+  border-color: var(--border-color-2);
+  color: var(--Black-90);
+  background-color: transparent;
+}
+.form-control:focus {
+  background-color: transparent;
+  border-color: var(--border-color-1);
+  color: var(--Black-90);
+  box-shadow: none;
+}
+.select-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 13px;
+}
+select.form-control:focus option {
+  background-color: var(--select-box-bg-color);
+}
+textarea.form-control {
+  height: 120px;
+  resize: none;
+}
+/* 
+13. video model
+ */
+.video-modal .btn-close {
+  height: 35px;
+  width: 35px;
+  background-image: none;
+  border-radius: 50%;
+  opacity: 1;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: -35px;
+  color: var(--White);
+  font-size: 16px;
+}
+.video-modal .modal-content {
+  border: 0;
+}
 /* 
 14. pagination 
 */
@@ -453,7 +516,9 @@ h3 {
   padding: 4px 8px;
   border-radius: 4px;
 }
-/* 24. testimonials sections */
+/* 
+24. testimonials sections 
+*/
 .testimonials-section .img-box {
   height: 150px;
   width: 150px;
@@ -564,7 +629,9 @@ h3 {
   top: 60%;
   background-color: var(--green-light);
 }
-/* 25. bai section */
+/* 
+25. bai section 
+*/
 
 .bai-section .circular-img-circle {
   background-color: var(--yellow-light);
@@ -719,9 +786,15 @@ h3 {
   min-width: 60px;
   color: var(--orange);
 }
+/* review filter */
+.reviews-filter {
+  margin: 0 0 35px;
+  width: 200px;
+}
 .reviews-item {
   position: relative;
   margin-bottom: 30px;
+  padding-left: 65px;
 }
 .reviews-item .img-box {
   max-width: 50px;
@@ -738,6 +811,104 @@ h3 {
   margin: 0 0 5px;
   color: var(--Black-90);
 }
+.reviews-item .stars-rating {
+  color: var(--orange);
+  font-size: 14px;
+}
+.reviews-item .stars-rating .date {
+  margin-left: 5px;
+  font-size: 14px;
+  display: inline-block;
+}
+.reviews-item p {
+  margin: 5px 0 0;
+}
+/* course sidebar */
+.course-sidebar .img-box {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.course-sidebar .img-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--Black-alpha-40);
+}
+.course-sidebar .play-icon {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--white);
+}
+.course-sidebar .img-box p {
+  position: absolute;
+  color: var(--white);
+  top: calc(50% + 40px);
+  font-weight: 500;
+  width: 100%;
+}
+.course-sidebar .price span {
+  margin-right: 8px;
+}
+
+.course-sidebar .price-new {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--Black-90);
+}
+.course-sidebar .price-discount {
+  color: var(--main-color);
+}
+.course-sidebar .features-list {
+  margin: 0 0 20px;
+}
+.course-sidebar .features-list li {
+  position: relative;
+  padding-left: 21px;
+  margin-bottom: 5px;
+}
+.course-sidebar .features-list li::before {
+  content: "";
+  height: 6px;
+  width: 6px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 0;
+  top: 9px;
+  border-radius: 50%;
+}
 /* 
 27. contact section
  */
+.contact-item {
+  position: relative;
+  padding-left: 55px;
+  margin-bottom: 40px;
+}
+.contact-item .icon-box {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  color: var(--white);
+}
