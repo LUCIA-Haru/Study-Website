@@ -37,6 +37,7 @@
   --orange: hsl(36, 80%, 50%);
   --white: hsl(0, 0%, 100%);
   --White: hsl(0, 0%, 100%);
+  --WHITE: hsl(0, 0%, 100%);
   --Black: hsl(0, 0%, 0%);
   --Black-90: hsl(0, 0%, 10%);
   --Black-70: hsl(0, 0%, 30%);
@@ -49,6 +50,17 @@
   --border-color-1: hsl(0, 0%, 90%);
 }
 /* 3. overrides variables for - theme dark */
+body.t-dark {
+  --body-bg-color: hsl(240, 10%, 19%);
+  --Black-70: hsl(0, 0%, 87%);
+  --Black-90: hsl(0, 0%, 100%);
+  --shadow: 0 0 10px hsla(0, 0%, 0%, 0.08);
+  --White: hsl(240, 8%, 21%);
+  --white: hsl(240, 8%, 21%);
+  --select-box-bg-color: hsl(240, 8%, 21%);
+  --border-color-2: hsl(240, 9%, 25%);
+  --border-color-1: hsl(240, 9%, 30%);
+}
 /* 4. base */
 body {
   background-color: var(--body-bg-color);
@@ -93,7 +105,7 @@ h3 {
 }
 /* 5. box */
 .box {
-  background-color: var(--White);
+  background-color: var(--white);
   border-radius: 5px;
   box-shadow: var(--shadow);
   padding: 30px;
@@ -137,7 +149,7 @@ h3 {
 /* 9. buttons */
 .btn-theme {
   background-color: var(--main-color);
-  color: var(--White);
+  color: var(--WHITE);
   font-size: 16px;
   text-transform: capitalize;
   font-weight: 500;
@@ -145,7 +157,7 @@ h3 {
   transition: all 0.3s ease;
 }
 .btn-theme:hover {
-  color: var(--White);
+  color: var(--WHITE);
   background-color: var(--button-hover-color);
 }
 .btn-theme:focus {
@@ -289,10 +301,89 @@ textarea.form-control {
 .nav-tabs .nav-link.active {
   background-color: var(--main-color);
   border-color: transparent;
-  color: var(--White);
+  color: var(--WHITE);
 }
 /* 17. bubble animation */
 /* 18. style switcher */
+.style-switcher {
+  width: 250px;
+  position: fixed;
+  height: 100%;
+  background-color: var(--white);
+  right: -250px;
+  top: 0;
+  z-index: 10;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: right 0.3s ease;
+}
+.style-switcher.open {
+  right: 0;
+}
+.style-switcher-toggler {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 28%;
+  left: -40px;
+  background-color: var(--main-color);
+  color: var(--WHITE);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+}
+.style-switcher h3 {
+  font-size: 18px;
+  text-transform: capitalize;
+  border-bottom: 1px solid var(--border-color-1);
+  padding: 0 0 10px;
+}
+.style-switcher-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color-1);
+}
+.theme-colors button {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 50%;
+  vertical-align: middle;
+  padding: 0;
+  position: relative;
+}
+.theme-colors button::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  color: var(--white);
+  transform: all 0.3s ease;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.theme-colors button.active::before {
+  opacity: 3;
+}
+.theme-colors .color-1 {
+  background-color: hsl(0, 74%, 61%);
+}
+.theme-colors .color-2 {
+  background-color: hsl(0230, 74%, 61%);
+}
+.theme-colors .color-3 {
+  background-color: hsl(36, 74%, 61%);
+}
+.theme-colors .color-4 {
+  background-color: hsl(277, 74%, 61%);
+}
+.theme-colors .color-5 {
+  background-color: hsl(164, 74%, 61%);
+}
 /* 19. header */
 .header {
   border-bottom: 1px solid var(--border-color-2);
@@ -327,6 +418,7 @@ textarea.form-control {
   font-size: 13px;
   margin-left: 3px;
   pointer-events: none;
+  transition: transform 0.3s ease;
 }
 /* hiding the sub menu in nav bar */
 .header .sub-menu {
