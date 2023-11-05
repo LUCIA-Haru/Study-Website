@@ -125,16 +125,16 @@
     visibility: visible;
     opacity: 0.8;
   }
-  .circular-img {
+  .row .circular-img {
     max-width: 280px;
   }
-  .circular-img img {
-    max-width: 240px;
-    right: 40px;
+  .row .circular-img img {
+    max-width: 230px;
   }
   .circular-img-inner .circular-img-circle {
     height: 280px;
     width: 280px;
+    margin: auto;
   }
   .banner-text h1 {
     font-size: 35px;
@@ -142,8 +142,87 @@
   .section-title .sub-title {
     font-size: 30px;
   }
+  .course-sidebar {
+    margin-top: 30px;
+  }
+  .course-instructor .img-box img {
+    width: 100px;
+  }
+  .course-instructor .details-wrap {
+    margin-bottom: 15px;
+  }
+  .rating-summary {
+    margin-bottom: 15px;
+  }
 }
 @media (max-width: 767px) {
+  .container {
+    --bs-gutter-x: 15px;
+  }
+  .box {
+    padding: 20px 15px;
+  }
+  .banner-text h1 {
+    font-size: 24px;
+  }
+  .bai-section {
+    text-align: center;
+  }
+  .section-title .title,
+  h3,
+  .banner-text h2 {
+    font-size: 18px;
+  }
+  .section .sub-title {
+    font-size: 22px;
+  }
+  .course-details .course-header h2 {
+    font-size: 24px;
+  }
+  .tab-content .course-curriculum .accordion-button span {
+    position: relative;
+    right: auto;
+    font-size: 12px;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .course-curriculum .accordion-button {
+    padding-right: 15px;
+  }
+  .tab-content .course-curriculum ul li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .tab-content .course-curriculum ul li span {
+    font-size: 12px;
+    position: relative;
+    display: block;
+    margin-top: 5px;
+  }
+  .tab-content .course-curriculum ul li {
+    padding: 0 0 0 20px;
+  }
+  .rating-box {
+    margin-bottom: 15px;
+  }
 }
 @media (max-width: 575px) {
+  .circular-img {
+    max-width: 230px;
+  }
+  .circular-img img {
+    max-width: 200px;
+  }
+  .circular-img-circle {
+    width: 230px;
+    height: 230px;
+  }
+  .footer-item {
+    text-align: center;
+  }
+  .header-logo a {
+    font-size: 22px;
+  }
+  .modal-dialog {
+    margin: 8px 15px;
+  }
 }
