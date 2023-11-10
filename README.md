@@ -9,3 +9,4 @@ This porject was built by following the YouTuber . HTML,CSS,JS,Bootstrap
 4. Contains animations
 5. Developed first With Desktop, then for Mobile.
 6. Compatible with all mobile devices and with a beautiful and pleasant user interface.
+7. Check the screenshot file for website pictures
